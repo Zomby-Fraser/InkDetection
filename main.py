@@ -9,8 +9,11 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 from tqdm import tqdm
 from ipywidgets import interact, fixed
+from dotenv import load_dotenv
+import os
 
-PREFIX = ''
+load_dotenv()
+PREFIX = os.getenv('PROJECT_DIR')
 BUFFER = 30  # Buffer size in x and y direction
 Z_START = 27 # First slice in the z direction to use
 Z_DIM = 10   # Number of slices in the z direction
